@@ -1,7 +1,30 @@
-import './App.css';
-import { Container, Description } from './Styles/styled';
+import { useEffect, useState } from "react";
+import "./App.css";
+import { Container, Description } from "./Styles/styled";
+
+interface IDogForm {
+  message: string;
+  status: string;
+}
 
 function App() {
+  const [dog, setDog] = useState<IDogForm>({
+    message: "",
+    status: "",
+  });
+
+  useEffect(() => {
+    fetch("https://dog.ceo/api/breeds/image/random", {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setDog(data);
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <Container>
       <Description>
@@ -14,6 +37,12 @@ function App() {
           <li> Unit Tests With Jest & React Testing Library</li>
         </ul>
       </Description>
+
+      <img
+        src={dog.message}
+        alt="dog"
+        style={{ width: "200px", height: "200px" }}
+      />
     </Container>
   );
 }
