@@ -45,6 +45,9 @@ function App() {
     fetchData();
   }, [breedState, fetchData]);
 
+  console.log("=> ", process.env.REACT_APP_DOG_API);
+  
+
   if (isLoading) return <Loader />;
   if (!breedList) return <p>No Dogs Found</p>;
   

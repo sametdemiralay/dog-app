@@ -1,5 +1,5 @@
 {
     "env": {
-      "REACT_APP_DOG_URL": "dog.ceo/api"
+      "REACT_APP_DOG_API": "dog.ceo/api"
     }
   }
