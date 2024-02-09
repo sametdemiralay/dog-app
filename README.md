@@ -1,4 +1,4 @@
-## 🐶 Dog Finder App Description
+## 🐶 Dog Image Finder App Description
 
 - ReactJS & TypeScript
 - Redux for State Management
@@ -7,6 +7,7 @@
 
 </br></br>
 **You can see the completed version to [click here](https://dog-app-pink.vercel.app).**
+</br></br>
 </br></br>
 
 ![Overview](public/project-overview.png)
