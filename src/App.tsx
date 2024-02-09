@@ -60,7 +60,6 @@ function App() {
           <li>Redux for State Management</li>
           <li>Axios for fetching Data</li>
           <li>Styled Components</li>
-          <li> Unit Tests With Jest & React Testing Library</li>
         </ul>
       </Description>
 
